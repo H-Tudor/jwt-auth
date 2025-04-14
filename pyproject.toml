@@ -1,0 +1,21 @@
+[project]
+name = "jwt-auth"
+version = "1.0.0"
+description = "Python-JOSE Wrapper for easy use"
+readme = "README.md"
+authors = [
+    { name = "Tudor Huza", email = "huzatudor@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.11.3",
+    "python-jose[cryptography]>=3.4.0",
+]
+
+[project.scripts]
+jwt-auth-demo = "jwt_auth.cli.demo:main"
+jwt-auth-test-any = "jwt_auth.cli.test_all:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
