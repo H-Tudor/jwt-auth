@@ -2,8 +2,14 @@
 
 A simple `python-jose` wrapper made for easy integration of advance functionality
 
-This library provides pre-made handlers for HMAC, RSA ECDSA (encoding-only) jwt
-encoding and encryption.
+This library provides 3 pre-made JWT handlers:
+- **HMAC** - uses a secret string key for signing and symmetric encryption
+- **RSA** - using a private / public key pair (RSA generated) for signing and asymmetric encryption
+- **ECDSA** - using a private / public key pair (Elliptical Curves Based) for signing **only**
+
+The library allows creation of you own handler with, for example, separate keys of encoding & encryption
+
+In the `docs` folder I put a mini JWT / JOSE explanation which sits at the foundation of this library
 
 ## Installation
 
@@ -21,8 +27,11 @@ pip install git+ssh://git@github.com/H-Tudor/jwt-auth.git
 
 After installation you can run the demo:
 
+```bash
+jwt-auth-demo
+```
 
-
+Or write the following script
 
 ```python
 from jwt_auth.handlers import RSAHandler
